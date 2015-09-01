@@ -1,6 +1,6 @@
 /**
  * A collection of filters for Brazilian standards
- * @version v1.1.0 - 2014-07-02
+ * @version v1.1.0 - 2015-09-01
  * @author Igor Costa
  * @link https://github.com/igorcosta/ng-filters-br
  * @license Apache License 2.0
@@ -8,7 +8,7 @@
 
 'use strict';
 // Source: dist/.temp/brasil/filters/cep.js
-angular.module('brasil.filters').filter('cep', function () {
+angular.module('brasil.filters', []).filter('cep', function () {
   return function (input) {
     var str = input + '';
     str = str.replace(/\D/g, '');
@@ -30,7 +30,7 @@ angular.module('brasil.filters').filter('cnpj', function () {
   };
 });
 // Source: dist/.temp/brasil/filters/cpf.js
-angular.module('brasil.filters', []).filter('cpf', function () {
+angular.module('brasil.filters').filter('cpf', function () {
   return function (input) {
     var str = input + '';
     str = str.replace(/\D/g, '');

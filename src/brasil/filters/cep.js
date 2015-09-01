@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('brasil.filters').filter('cep', function() {
+angular.module('brasil.filters', []).filter('cep', function() {
   return function(input) {
   	var str = input+ '';
         str = str.replace(/\D/g,'');
